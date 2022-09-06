@@ -13,7 +13,7 @@ int main() {
     scanf("%d", &user_number);
     printf("Number You entered: %d \n\n", user_number);
 
-    flag = checkNumber(user_number); // F-ction
+    flag = checkNumber(user_number); // function
 
     if (flag == 1) {
         printf("\nCan be expressed\n");
@@ -29,7 +29,7 @@ int checkNumber(int user_number) {
 
     for (prime_1 = 2; prime_1 < user_number; prime_1++) {
         int marker_1 = 0;
-            // Check if 'prime_1' is in fact a prime number
+            // check if 'prime_1' is in fact a prime number
             for (int i = 2; i < prime_1; i++) {
                 if (prime_1 % i == 0) {
                     marker_1 = 1;
@@ -40,7 +40,7 @@ int checkNumber(int user_number) {
         if (marker_1 == 0) {
            for (prime_2 = 2; prime_2 < user_number; prime_2++) {
                int marker_2 = 0;
-                       // Check if 'prime_2' is in fact a prime number
+                       // check if 'prime_2' is in fact a prime number
                        for (int j = 2; j < prime_2; j++) {
                            if (prime_2 % j == 0) {
                                 marker_2 = 1;
@@ -48,7 +48,7 @@ int checkNumber(int user_number) {
                            }
                        }
                    if (marker_2 == 0) {
-                        // Summarize prime numbers
+                        // summarize prime numbers
                         if (prime_1 + prime_2 == user_number) {
                             printf("%d + %d \n" , prime_1, prime_2);
                             flag = 1;

@@ -55,7 +55,7 @@ int decimal2octal(int decimalValue) {
     }
     sum /= 10;
     
-    /* reversing octal result */
+    /* Reversing octal result */
     while (sum >= 1) {
         octal += sum % 10 * m; 
         sum /= 10;

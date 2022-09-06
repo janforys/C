@@ -1,7 +1,9 @@
 /* C Program to Convert Binary Number to Decimal and vice-versa.
 
 Instruction how to make such conversion:
-https://www.electrical4u.com/binary-to-decimal-and-decimal-to-binary-conversion/ */
+https://www.electrical4u.com/binary-to-decimal-and-decimal-to-binary-conversion/
+* 
+* Jan Forys 2022 */
 
 
 #include "stdio.h"

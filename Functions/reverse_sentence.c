@@ -15,7 +15,7 @@ void reverse() {
     char sentence;
     scanf("%c", &sentence);
     printf("%c", sentence);
-
+    
     if (sentence != '\n') {
         reverse();
         printf("%c", sentence);

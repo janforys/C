@@ -47,7 +47,7 @@ long binary2octal(long binary_value) {
             sum_result += sum *= m; // result before reversing
             m /= 10;
         }
-    // Reverse 'sum_result' to get final result
+    /* Reverse 'sum_result' to get final result */
     do {
         result += sum_result % 10 * multiplier;
         sum_result /= 10;

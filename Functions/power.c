@@ -1,8 +1,5 @@
 /* C Program to calculate the power using recursion */
 
-/* NOTE: That program works well with online compilers
-but do not on PC */
-
 
 #include "stdio.h"
 
@@ -19,7 +16,9 @@ int main() {
 }
 
 int power(int base, int factor) {
-    if (factor > 1) {
+    if (factor != 0) {
         return base * power(base, factor - 1);
+    } else {
+        return 1;
     }
 }

@@ -6,7 +6,6 @@
 int recursion(int number);
 
 int main() {
-
     int number;
     printf("Give me some Number: ");
     scanf("%d", &number);

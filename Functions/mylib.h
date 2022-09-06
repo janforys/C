@@ -1,5 +1,8 @@
+/* +++++++ My Library +++++++ */
+/* +++++ Jan Forys 2022 +++++ */
 
 
+/* Function that converts decimal value to binary value */
 int decimal2binary(int decimal_value) {
     int m, multiplier = 1, sum = 0, sum_result = 0;
     // Count 'multiplier' value, needed for remainder multiplying

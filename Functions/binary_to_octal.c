@@ -28,7 +28,7 @@ long binary2octal(long binary_value) {
     long m, multiplier = 1, counter = 0;
     long b, power_factor;
 
-    // 'multiplier' value counting
+    /* 'multiplier' value count */
     for (b = binary_value; b >= 1; b /= 10) {
         if (counter == 3) {
             multiplier *= 10;

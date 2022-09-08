@@ -14,10 +14,15 @@ int decimal2binary(int decimal_value);
 
 int main() {
     int binary_value, decimal_value;
+    
+    printf("binary: ");
     scanf("%d", &binary_value);
     printf("%d \n\n", binary2decimal(binary_value));
+    
+    printf("decimal: ");
     scanf("%d", &decimal_value);
     printf("%d \n", decimal2binary(decimal_value));
+    
     return 0;
 }
 

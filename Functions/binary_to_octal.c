@@ -6,8 +6,8 @@ https://www.electrical4u.com/binary-to-octal-and-octal-to-binary-conversion/
 Jan Forys 2022 */
 
 
-#include "stdio.h"
-#include "math.h"
+#include <stdio.h>
+#include <math.h>
 #include "mylib.h"
 
 long binary2octal(long binary_value);
@@ -16,15 +16,20 @@ int octal2binary(int octal_value);
 int main() {
     long binary_value;
     int octal_value;
+    
+    printf("binary: ");
     scanf("%ld", &binary_value);
     printf("%ld \n\n", binary2octal(binary_value));
+    
+    printf("octal: ");
     scanf("%d", &octal_value);
     printf("%d \n", octal2binary(octal_value));
+    
     return 0;
 }
 
 long binary2octal(long binary_value) {
-    long sum, sum_result, result = 0;
+    long sum, sum_result = 0, result = 0;
     long m, multiplier = 1, counter = 0;
     long b, power_factor;
 

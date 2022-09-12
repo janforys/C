@@ -62,7 +62,7 @@ long binary2octal(long binary_value) {
 }
 
 int octal2binary(int octal_value) {
-    int octal, result = 0, binary_value = 0;
+    int octal, binary = 0, binary_value = 0;
     int m, multiplier = 1;
         for (octal = octal_value * 0.1; octal >= 1; octal /= 10) {
             multiplier *= 1000;
@@ -73,10 +73,10 @@ int octal2binary(int octal_value) {
             octal_value /= 10;
             multiplier /= 1000;
         } do {
-            result += binary_value % 1000 * m;
+            binary += binary_value % 1000 * m;
             binary_value /= 1000;
             m /= 1000;
         } while (binary_value >= 1);
-    return result; // TODO: Bug: does not print '0s' at the beggining
+    return binary;
 }
 

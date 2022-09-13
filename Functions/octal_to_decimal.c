@@ -46,21 +46,31 @@ int decimal2octal(int decimalValue) {
         multiplier *= 10;
     }
     int m = multiplier;
-    
+    decimalValue *= 10;
     while (decimalValue >= 1) {
-        sum += value % 8 * multiplier;
+        int temp = value % 8;
+        //sum += value % 8 * multiplier;
+            if (value == 1) {
+                 temp = value;   
+            }
+        printf("\n%d", temp);
+        sum += temp * multiplier;
+        printf("\n");
+        printf("%d", sum);
         value /= 8; // 8 because it is octal
+        printf("\n%d", value);
         decimalValue /= 10;
         multiplier /= 10; // needed to concatenate
     }
-    sum /= 10;
+    printf("\n");
+    //sum /= 10;
     
     /* Reversing octal result */
-    while (sum >= 1) {
+    /*while (sum >= 1) {
         octal += sum % 10 * m; 
         sum /= 10;
         m /= 10;
     }
-    octal /= 10;
-    return octal;
+    octal /= 10;*/
+    return 666;
 }

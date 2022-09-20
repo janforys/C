@@ -5,24 +5,25 @@
 
 int main() {
 
- int howMany, average;
+ int howMany;
+ float average;
  printf("Type how many elements to calculate: ");
  scanf("%d", &howMany);
- int array[howMany - 1];
+ float array[howMany - 1];
 
  /* Save into */
  printf("Type elements to calculate: ");
  for (int x = 0; x <= howMany - 1; ++x) {
-  scanf("%d", &array[x]);
+  scanf("%f", &array[x]);
  }
 
  /* Print from */
  for (int x = 0; x <= howMany - 1; ++x) {
-  int sum;
+  float sum;
   average = (sum += array[x]) / howMany;
  }
 
- printf("Average = %d\n\n", average);
+ printf("Average = %f\n\n", average);
 
  return 0;
 }

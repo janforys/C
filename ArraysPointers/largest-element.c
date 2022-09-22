@@ -9,25 +9,29 @@
 
 int main() {
 
-int index = 0;
+int largestElement, index = 5;
 int elements[index];
-int largestElement;
+int elementsCompare[index];
 
-while(1) {
 printf("Element: ");
-scanf("%d", &elements[index]);
-printf("Largest element: %d\n", elements[index]);
-largestElement = elements[index];
-for (int i = 0; i <= index; i++) {
-if (elements[i] > largestElement) {
-	elements[index] = elements[i];
-}
-}
-printf("index = %d\n", index);
-index++;
+for (int i = 0; i < index; i++) {
+scanf("%d", &elements[i]);
 }
 
-printf("\n\n");
+/* Copying arrays */
+for (int loop = 0; loop < index; loop++) {
+elementsCompare[loop] = elements[loop];
+}
+
+for (int i = 0; i < index; i++) {
+for (int c = 0; c < index; c++) {
+if (elements[i] < elementsCompare[c]) {
+largestElement = elementsCompare[c];
+}
+}
+}
+
+printf("Largest element: %d\n\n", largestElement);
 return 0;
 
 }

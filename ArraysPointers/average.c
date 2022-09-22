@@ -9,7 +9,7 @@ int main() {
  float average;
  printf("Type how many elements to calculate: ");
  scanf("%d", &index);
- float array[index--];
+ float array[index];
 
  /* Save into */
  printf("Type elements to calculate: ");

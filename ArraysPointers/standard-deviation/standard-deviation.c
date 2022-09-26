@@ -22,7 +22,7 @@ return 0;
 void calculateSD(float nums[10]) {
 
 float standardDeviation;
-float sum = 0, summary = 0;
+float sum = 0.f, summary = 0.f;
 float mean, variance;
 
 for (int index = 0; index < 10; index++) {

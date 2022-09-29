@@ -8,17 +8,21 @@ int main() {
 /* Declare dimensions of 2D arrays */
 const int x1, y1, x2, y2;
 
-printf("Define dimensions of first array:\n");
-scanf("%d%d", &x1, &y1);
-printf("Define dimensions of second array:\n");
-scanf("%d%d", &x2, &y2);
+printf("Define dimensions of first 2D array:\nRows: ");
+scanf("%d", &x1);
+printf("Columns: ");
+scanf("%d", &y1);
+printf("Define dimensions of second 2D array:\nRows: ");
+scanf("%d", &x2);
+printf("Columns: ");
+scanf("%d", &y2);
 
 int array1[x1][y1];
 int array2[x2][y2];
 
 /* Fill arrays with numbers */
 /* array1 */
-printf("____Array 1____\n");
+printf("\n_____Array 1_____\n");
 for (int i = 0; i < x1; i++) {
  for (int k = 0; k < y1; k++) {
 	printf("Enter element for array1[%d][%d]: ", i, k);
@@ -26,7 +30,7 @@ for (int i = 0; i < x1; i++) {
 }
 }
 /* array2 */
-printf("\n____Array 2____\n");
+printf("\n_____Array 2_____\n");
 for (int m = 0; m < x2; m++) {
  for (int n = 0; n < y2; n++) {
 	printf("Enter element for array2[%d][%d]: ", m, n);
@@ -50,14 +54,35 @@ for (int m = 0; m < x2; m++) {
 }
 }
 
-printf("\n_________________________\n");
+printf("\n__________________________\n");
 
 /* Add matrices */
-printf("Sum of matrices: ");
+printf("Sum of matrices:\n");
+/* array1 */
+for (int i = 0; i < x1; i++) {
+	printf("| ");
+ for (int k = 0; k < y1; k++) {
+	printf("%d ", array1[i][k]);
+}
+ printf("|\n");
+}
+/* array2 */
+printf("   + \n");
+for (int m = 0; m < x2; m++) {
+	printf("| ");
+ for (int n = 0; n < y2; n++) {
+	printf("%d ", array2[m][n]);
+}
+ printf("|\n");
+}
+/* result */
+printf("   = \n");
 for (int a = 0; a < x1; a++) {
- for (int b = 0; b < y1; b++) {
+	printf("| ");
+ for (int b = 0; b < y1; b++) {	 
 	printf("%d ", array1[a][b] + array2[a][b]);
 }
+ printf("|\n");
 }
 
 printf("\n\n");

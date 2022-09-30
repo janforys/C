@@ -2,6 +2,9 @@
 
 
 #include <stdio.h>
+#include <unistd.h>
+
+void loader();
 
 int main() {
 
@@ -56,6 +59,10 @@ for (int m = 0; m < x2; m++) {
 
 printf("\n__________________________\n");
 
+/* Loading animation */
+loader();
+printf("\n");
+
 /* Add matrices */
 printf("Sum of matrices:\n");
 /* array1 */
@@ -64,7 +71,7 @@ for (int i = 0; i < x1; i++) {
  for (int k = 0; k < y1; k++) {
 	printf("%d ", array1[i][k]);
 }
- printf("|\n");
+printf("|\n");
 }
 /* array2 */
 printf("   + \n");
@@ -73,7 +80,7 @@ for (int m = 0; m < x2; m++) {
  for (int n = 0; n < y2; n++) {
 	printf("%d ", array2[m][n]);
 }
- printf("|\n");
+printf("|\n");
 }
 /* result */
 printf("   = \n");
@@ -82,10 +89,32 @@ for (int a = 0; a < x1; a++) {
  for (int b = 0; b < y1; b++) {	 
 	printf("%d ", array1[a][b] + array2[a][b]);
 }
- printf("|\n");
+printf("|\n");
 }
 
 printf("\n\n");
 
 return 0;
+}
+
+void loader() {
+    const int delayTime = 500; // ms
+    const int numDots = 6;
+    const char text[] = "Wait";
+    const int wait = 2;
+    int w = 1;
+
+    while (w <= wait) {
+        // Return and clear with spaces, then return and print prompt.
+        printf("\r%*s\r%s", sizeof(text) - 1 + numDots, "", text);
+        fflush(stdout);
+
+        // Print numDots number of dots, one every trigger milliseconds.
+        for (int i = 0; i < numDots; i++) {
+            usleep(delayTime * 1000);
+            fputc('.', stdout);
+            fflush(stdout);
+        }
+	w++;
+    }
 }

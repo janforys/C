@@ -2,6 +2,7 @@
 
 
 #include <stdio.h>
+#include <unistd.h>
 
 int main() {
 
@@ -24,7 +25,7 @@ int main() {
  }
 
  printf("Average = %f\n\n", average);
-
+ pause();
  return 0;
 }
 

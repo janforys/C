@@ -93,7 +93,7 @@ printf("|\n");
 }
 
 printf("\n\n");
-
+pause();
 return 0;
 }
 

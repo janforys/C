@@ -21,6 +21,7 @@
 *.a
 *.la
 *.lo
+*.out
 
 # Shared objects (inc. Windows DLLs)
 *.dll
@@ -35,6 +36,7 @@
 *.i*86
 *.x86_64
 *.hex
+*.sh
 
 # Debug files
 *.dSYM/

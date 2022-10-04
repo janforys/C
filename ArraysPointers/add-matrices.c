@@ -92,7 +92,7 @@ for (int a = 0; a < x1; a++) {
 printf("|\n");
 }
 
-printf("\n\n");
+printf("\n\nPRESS CTRL+C TO EXIT\n");
 pause();
 return 0;
 }

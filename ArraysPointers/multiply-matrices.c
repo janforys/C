@@ -84,16 +84,23 @@ printf("|\n");
 }
 /* result */
 printf("   = \n");
-for (int a = 0; a < x1; a++) {
- for (int b = 0; b < y1 - 1; b++) {
-	printf("| ");
-  for (int c = 0; c < y2; c++) {
-   for (int d = 0; d < x2 - 1; d++) {	  
-	printf("%d ", array1[a][b] * array2[d][c] +
-	array1[a][b+1] * array2[d+1][c]);
-   }
-  }
+int i, m, n;
+int result[i][n];
+for (i = 0; i < 10; i++) {
+ for (n = 0; n < 10; n++) {
+	 result[i][n] = 0; // init to 0
  }
+}
+
+for (i = 0; i < x1; i++) {
+	printf("| ");
+ for (m = 0; m < y2; m++) {
+  for (n = 0; n < y1; n++) {	 
+	result[i][n] += array1[i][m] * array2[m][n];
+  }
+  //printf("%d ", result[1][1]);
+ }
+printf("%d ", result[i][n]);
 printf("|\n");
 }
 

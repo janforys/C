@@ -84,25 +84,37 @@ printf("|\n");
 }
 /* result */
 printf("   = \n");
-int i, m, n;
-int result[i][n];
-for (i = 0; i < 10; i++) {
- for (n = 0; n < 10; n++) {
-	 result[i][n] = 0; // init to 0
+int i, m, n,z,x;
+int a[i][m];
+for (i = 0; i < x1; i++) {
+ for (m = 0; m < y2; m++) {
+	 a[i][m] = 2; // init to 0
  }
 }
 
 for (i = 0; i < x1; i++) {
+	/*for(z=0;z<x1;z++){
+	 for(x=0;x<y2;x++){
+	  a[z][x]=0;
+	 }
+	}*/
 	printf("| ");
  for (m = 0; m < y2; m++) {
-  for (n = 0; n < y1; n++) {	 
-	result[i][n] += array1[i][m] * array2[m][n];
-  }
-  //printf("%d ", result[1][1]);
+  printf("%d ", array2[i][m]);
+	for (int n = 0; n < y1; n++) {	 
+	a[i][m] += array1[i][n] * array2[n][m] ;
+//	printf("%d ", a[i][m]);
+ 	}
  }
-printf("%d ", result[i][n]);
-printf("|\n");
 }
+
+/*for (int i = 0; i < 5; ++i) {
+      for (int m = 0; m < 5; ++m) {
+         printf("%d  ", a[i][m]);
+      }
+}*/   
+
+printf("|\n");
 
 printf("\n\nPRESS CTRL+C TO EXIT\n");
 pause();

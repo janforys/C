@@ -2,7 +2,7 @@
 /* an example from book */
 
 
-#include <stdio.h>
+#include <stdio.h> 
 
 /* Print arguments (version 1) */
 int main(int argc, char *argv[]) 

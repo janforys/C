@@ -84,37 +84,37 @@ printf("|\n");
 }
 /* result */
 printf("   = \n");
-int i, m, n,z,x;
+
+int i, m;
 int a[i][m];
+
 for (i = 0; i < x1; i++) {
  for (m = 0; m < y2; m++) {
-	 a[i][m] = 2; // init to 0
+	a[i][m] = 0; // init to 0
  }
 }
 
 for (i = 0; i < x1; i++) {
-	/*for(z=0;z<x1;z++){
-	 for(x=0;x<y2;x++){
-	  a[z][x]=0;
-	 }
-	}*/
 	printf("| ");
  for (m = 0; m < y2; m++) {
-  printf("%d ", array2[i][m]);
+  //printf("%d ", a[i][m]);
 	for (int n = 0; n < y1; n++) {	 
-	a[i][m] += array1[i][n] * array2[n][m] ;
-//	printf("%d ", a[i][m]);
- 	}
+		a[i][m] += array1[i][n] * array2[n][m] ; 
+		//printf("%d ", a[i][m]);
+	}
+	//printf("%d ", a[i][m]);
  }
+ //printf("|\n");
 }
 
-/*for (int i = 0; i < 5; ++i) {
-      for (int m = 0; m < 5; ++m) {
-         printf("%d  ", a[i][m]);
-      }
-}*/   
-
-printf("|\n");
+/*printf("\nOutput:\n");
+for (int i = 0; i < x1; i++) {
+	for (int j = 0; j < y2; j++) {
+		printf("%d ", a[i][j]);
+		if (j == y2 - 1)
+		printf("\n");
+	}
+}*/
 
 printf("\n\nPRESS CTRL+C TO EXIT\n");
 pause();

@@ -22,6 +22,7 @@ scanf("%d", &y2);
 
 int array1[x1][y1];
 int array2[x2][y2];
+int result[10][10];
 
 /* Fill arrays with numbers */
 /* array1 */
@@ -85,36 +86,22 @@ printf("|\n");
 /* result */
 printf("   = \n");
 
-int i, m;
-int a[i][m];
-
-for (i = 0; i < x1; i++) {
- for (m = 0; m < y2; m++) {
-	a[i][m] = 0; // init to 0
- }
-}
-
-for (i = 0; i < x1; i++) {
-	printf("| ");
- for (m = 0; m < y2; m++) {
-  //printf("%d ", a[i][m]);
-	for (int n = 0; n < y1; n++) {	 
-		a[i][m] += array1[i][n] * array2[n][m] ; 
-		//printf("%d ", a[i][m]);
-	}
-	//printf("%d ", a[i][m]);
- }
- //printf("|\n");
-}
-
-/*printf("\nOutput:\n");
 for (int i = 0; i < x1; i++) {
-	for (int j = 0; j < y2; j++) {
-		printf("%d ", a[i][j]);
-		if (j == y2 - 1)
-		printf("\n");
+ for (int m = 0; m < y2; m++) {
+	result[i][m] = 0; // init to 0
+ }
+}
+
+for (int i = 0; i < x1; i++) {
+	printf("| ");
+ for (int m = 0; m < y2; m++) {
+	for (int n = 0; n < y1; n++) {	 
+		result[i][m] += array1[i][n] * array2[n][m] ; 
 	}
-}*/
+	printf("%d ", result[i][m]);
+ }
+ printf("|\n");
+}
 
 printf("\n\nPRESS CTRL+C TO EXIT\n");
 pause();

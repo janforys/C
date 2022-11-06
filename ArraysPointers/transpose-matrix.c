@@ -8,15 +8,12 @@ void transpose();
 
 int main() {
 
-const int x1, y1, x2, y2;
+const int x1, y1;
 
 printf("Enter rows, columns: \n");
 scanf("%d %d", &x1, &y1);
 
-//printf("Enter rows, columns: \n");
-//scanf("%d %d", &x2, &y2);
-
-transpose(x1, y1, x2, y2);
+transpose(x1, y1);
 
 printf("\nPRESS CTRL+C TO EXIT\n");
 pause();
@@ -24,40 +21,34 @@ pause();
 return 0;
 }
 
-void transpose(int x1, int y1, int x2, int y2) {
+void transpose(int x1, int y1) {
 
-int m1[x1][y1];
-int m2[x2][y2];
+int matrix[x1][y1];
 int result[10][10];
 
-/* Fill matrices */
-/* First matrix */
+/* Fill initial matrix */
 for (int i = 0; i < x1; i++)
 	for (int j = 0; j < y1; j++)
-		scanf("%d", &m1[i][j]);
-	
-/* Second matrix */
-/*for (int i = 0; i < x2; i++)
-	for (int j = 0; j < y2; j++)
-		scanf("%d", &m2[i][j]);
-*/
+		scanf("%d", &result[i][j]);
+
 /* Print out matrices */
-/* First matrix */
+/* initial matrix */
 for (int i = 0; i < x1; i++) {
 	printf("\n");
 	for (int j = 0; j < y1; j++) {
-		printf("%d", m1[j][i]);
+		printf("%d ", result[i][j]);
 	}
 }
-	
-/* Second matrix */
-/*printf("\n");
-for (int i = 0; i < x2; i++) {
+printf("\n");
+
+/* result matrix */
+for (int i = 0; i < y1; i++) {
 	printf("\n");
-	for (int j = 0; j < y2; j++) {
-		printf("%d", m2[i][j]);
+	for (int j = 0; j < x1; j++) {
+		printf("%d ", result[j][i]);
 	}
-}*/
+}
 printf("\n");
 
 }
+

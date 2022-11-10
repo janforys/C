@@ -6,6 +6,12 @@
 
 int main() {
 
+int x, y;
+
+printf("rows: ");
+scanf("%d", &x);
+printf("columns: ");
+scanf("%d", &y);
 
 
 printf("\n\nPRESS CTRL+C TO EXIT\n");
